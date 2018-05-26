@@ -1,0 +1,209 @@
+/* main characteristics of the portfolio CSS */
+
+a.nolink {
+  text-decoration: none;
+}
+
+body, div, html {
+  background-color: #001;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #343;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+}
+
+.header-label {
+  text-align: center;
+}
+
+article, section {
+  padding: 0 0 0 2em;
+}
+
+/* TODO: adjust width of story as more projects get completed */
+
+.story {
+  width: 90%;
+  padding: 1em 0 0 0;
+}
+
+.header {
+  border-bottom: 5px solid #603;
+  width: 100%;
+  margin: 0 0.5em 0;
+}
+
+/* container information */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 0;
+}
+
+/* animated text */
+
+.flash-eu {
+  animation-name: flash-eu;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash-eu {
+  from {
+    color: blue;
+  }
+  to {
+    color: yellow;
+  }
+}
+
+.flash-us {
+  animation-name: flash-us;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes flash-us {
+  33% {
+    color: red;
+  }
+  66% {
+    color: white;
+  }
+  99% {
+    color: blue;
+  }
+}
+
+.logo {
+  min-width: 15%;
+  max-width: 20%;
+  display: block;
+  margin: auto;
+  padding: 1em;
+}
+
+.main-picture {
+  max-width: 90%;
+  padding: 1em 2em 0 0;
+}
+
+.contact {
+  text-align: center;
+}
+
+.linkedin, .email {
+  width: 25px;
+  padding: 0.5em;
+}
+
+/* break point between 450 and 549px */
+
+@media screen and (min-width: 450px) and (max-width: 549px) {
+  .story {
+    padding: 0 0 0 2em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+}
+
+/* break point - 550px */
+
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h3 {
+    font-size: 1.7em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .story {
+    max-width: 500px;
+    padding: 1em;
+  }
+
+  .feature-table {
+    display: flex;
+  }
+
+  .linkedin, .email {
+    width: 40px;
+    padding: 1em;
+  }
+}
+
+  /* break point - 950px */
+  @media screen and (min-width: 950px) {
+    h4 {
+      font-size: 1.35em;
+    }
+
+    p, .header, .featured, .about_me {
+      width: 950px;
+      position: relative;
+    }
+
+    .header, .featured, .about_me, .main {
+      margin: auto;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .logo {
+      float: left;
+      width: 40%;
+    }
+
+    .header-text {
+      float: right;
+      text-align: right;
+      align-items: baseline;
+      padding: 3em 0 0;
+    }
+
+    .main {
+      max-width: 80%;
+      vertical-align: top;
+      float: left;
+      padding-right: 16em;
+    }
+
+    .main-picture {
+      padding: 1em 0 1em 8em;
+    }
+
+    .feature-table {
+      width: 90%;
+    }
+  }
